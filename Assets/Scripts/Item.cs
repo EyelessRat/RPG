@@ -11,9 +11,5 @@ public class Item : MonoBehaviour
         this.data = data;
     }
 
-    public void Test()
-    {
-        
-    }
 }
 

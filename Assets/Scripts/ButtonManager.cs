@@ -14,7 +14,9 @@ public class ButtonManager : MonoBehaviour
 
     public void OnClickDefend()
     {
+        player.isDefending = true;
         battleManager.NextTurn();
+        
     }
 
 

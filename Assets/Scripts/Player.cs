@@ -12,6 +12,7 @@ public class Player : MonoBehaviour
     [SerializeField] private int armour;
     [SerializeField] private int str;
 
+    public bool isDefending = false;
 
     private void OnEnable()
     {
@@ -26,7 +27,13 @@ public class Player : MonoBehaviour
     public void Damage(int damage)
     {
         int dmg = damage - armour;
+        if(isDefending)
+        {
+            dmg = Mathf.FloorToInt(dmg/2);
+        }
         hp -= Mathf.Max(dmg, 1);
+        
+        isDefending = false;
     }
 
     public int GetPlayerDamage()
