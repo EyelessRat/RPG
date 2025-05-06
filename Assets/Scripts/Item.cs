@@ -10,4 +10,10 @@ public class Item : MonoBehaviour
         this.qty = qty;
         this.data = data;
     }
+
+    public void Test()
+    {
+        
+    }
 }
+
