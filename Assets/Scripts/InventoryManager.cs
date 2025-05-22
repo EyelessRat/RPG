@@ -3,7 +3,15 @@ using UnityEngine;
 
 public class InventoryManager : MonoBehaviour
 {
-    private List<Item> items = new List<Item>();
+    public List<Item> items = new List<Item>();
+    public ItemData[] itemData;
+
+    private void Start()
+    {
+        items.Add(new Item(1, itemData[0]));
+        items.Add(new Item(1, itemData[1]));
+        items.Add(new Item(1, itemData[2]));
+    }
 
     public void AddItem(ItemData itemData, int qty = 1)
     {

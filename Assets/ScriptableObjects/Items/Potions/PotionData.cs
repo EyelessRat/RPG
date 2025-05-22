@@ -6,4 +6,5 @@ public class PotionData : ItemData
     public int heal;
     public int armorAdd;
     public int strAdd;
+    public int duration = 0;
 }

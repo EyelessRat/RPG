@@ -8,6 +8,7 @@ public class EnemyControler : MonoBehaviour
 
     [SerializeField] private EnemyData enemyData;
     private int hp;
+    private int maxHp;
 
 
     private void OnEnable()
@@ -23,6 +24,7 @@ public class EnemyControler : MonoBehaviour
     private void Start()
     {
         hp = enemyData.hp;
+        maxHp = enemyData.maxHp;
     }
     
     private void DamagePlayer(int damage)
